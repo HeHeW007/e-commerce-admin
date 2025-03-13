@@ -275,7 +275,7 @@ body{
 
 /* Dashboard Container */
 .dashboard-container {
-  padding: 20px;
+  padding: 15px;
 }
 
 /* Navbar */
@@ -414,3 +414,195 @@ tr:hover {
   100% { opacity: 0; transform: translateY(-10px); }
 }
 
+/*nav content*/
+.nav-content
+{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 50px;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.nav-content > a{
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+.nav-content > a:hover
+{
+  opacity: 0.8;
+  color: #ddd;
+  transition: ease 0.1;
+}
+.nav-content > a::after
+{
+  content: "";
+  display: block;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+.nav-content > a:hover::after{
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+button svg {
+  transition: color 0.2s;
+}
+
+button:hover svg {
+  color: white;
+}
+
+
+/*  Product  */
+/* General Styling */
+.product-container {
+  width: 100%;
+  max-width: 1469px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.product-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+}
+
+.product-price {
+  font-size: 16px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Action Buttons */
+.product-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.edit-btn,
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin: 0 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.edit-btn:hover {
+  color: blue;
+  transform: scale(1.1);
+}
+
+.delete-btn:hover {
+  color: red;
+  transform: scale(1.1);
+}
+
+/* Delete Confirmation Dialog */
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dialog-actions {
+  margin-top: 15px;
+}
+
+.cancel-btn,
+.confirm-btn {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.cancel-btn {
+  background: #ccc;
+}
+
+.confirm-btn {
+  background: red;
+  color: white;
+}
+
+.product-image {
+  width: 100%;
+  max-height: 180px;
+  object-fit:contain;
+  border-radius: 8px;
+
+}

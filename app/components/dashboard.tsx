@@ -1,48 +1,16 @@
 "use client";
 
-import React from 'react'
-import dashboardData from '../data/dashboardData';
-import { useNavigate } from "react-router-dom";
-import {useState } from "react"
+import React from "react";
+import dashboardData from "../data/dashboardData"; // Ensure correct import path
+import Navbar from "./nav"; // Ensure correct import path
 
 
 function Dashboard() {
-
-  const navigate = useNavigate();
-  const[showAlert , setShowAlert] = useState(false)
-
-  // useEffect(() => {
-  //   const token = localStorage.getItem("token");
-  //   if (!token) {
-  //     navigate("/");
-  //   }
-  // }, [navigate]);
-
-  function handleLogout()
-  {
-    // Clear authentication data
-    // localStorage.removeItem("token");
-
-    // Show logout success message
-    setShowAlert(true);
-
-    // Redirect after 2 seconds
-    setTimeout(() => {
-      navigate("/");
-    }, 2000);
-  }
-  
+  if (!dashboardData) return <p>Loading...</p>; // Handle missing data
 
   return (
     <div className="dashboard-container">
-      {showAlert && <div className="logout-alert">✅ Logout successful!<br/> Thank you for your visit.</div>}
-      {/* Navbar */}
-      <div className="nav-container">
-        <h2>
-          NEXA<span>CART</span>
-        </h2>
-        <button type="submit" onClick={handleLogout}>Logout</button>
-      </div>
+      <Navbar />
 
       {/* Stats Cards */}
       <div className="stats-container">
@@ -105,7 +73,7 @@ function Dashboard() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Dashboard
+export default Dashboard;

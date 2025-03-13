@@ -1,9 +1,13 @@
-//import Signup from "./components/Signup";
-//import {BrowserRouter as Router, Routes,Route} from "react-router-dom"
-import AppRouter from "./components/router";
+"use client";
+
+import Signup from "./components/Signup";
+import Layout from "./layout"
 
 export default function Home() {
+
   return (
-    <AppRouter/>    
+    <Layout>
+      <Signup/>
+    </Layout>
   );
 }
