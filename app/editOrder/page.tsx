@@ -1,14 +1,14 @@
 "use client";
 
 import Navbar from "@/app/components/nav";
-import EditProduct from "../../components/EditProduct";
-import Layout from "../../layout";
+import Layout from "../layout";
+import EditOrder from "../components/EditOrder";
 
 export default function EditProd() {
   return (
     <Layout>
       <Navbar/>
-    <EditProduct/>
+    <EditOrder/>
     </Layout>
   );
 }

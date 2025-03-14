@@ -48,7 +48,7 @@ function Product() {
             {/* Action Buttons */}
             <div className="product-actions">
               <button className="edit-btn" onClick={() => router.push(`/editProduct/${product.id}`)}>
-                <Pencil className="icon" />
+                <Pencil className="Icon" />
               </button>
               <button className="delete-btn" onClick={() => openDeleteDialog(product.id)}>
                 <Trash2 className="icon" />
