@@ -537,20 +537,26 @@ button:hover svg {
 
 .edit-btn,
 .delete-btn {
-  background: none;
+  background: nonw;
   border: none;
   cursor: pointer;
   padding: 8px;
   margin: 0 5px;
   transition: transform 0.2s ease-in-out;
 }
-
+.Icon{
+  color: #007bff;
+}
+.edit-btn,.Icon:hover {
+  color: #007bff;
+  transform: scale(1.1);
+}
 .edit-btn:hover {
-  color: blue;
+  color: #007bff;
   transform: scale(1.1);
 }
 
-.delete-btn:hover {
+.delete-btn,.icon:hover {
   color: red;
   transform: scale(1.1);
 }
@@ -606,3 +612,286 @@ button:hover svg {
   border-radius: 8px;
 
 }
+
+
+
+/*  edit product  */
+.E-Product-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff; /* Light gray background */
+  margin-top: -10px;
+}
+
+.product-content {
+
+  background: rgb(238, 245, 247);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin:0px auto;
+  box-shadow: 1px 1px 1px rgba(68, 75, 78, 0.3);
+}
+
+.edit-product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group > label {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #374151; /* Dark gray text */
+}
+.form-group > input{
+  border: none;
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #d1d5db; /* Light gray border */
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 1px rgba(69, 144, 214, 0.3);
+}
+
+.name-input:focus,
+.price-input:focus {
+  outline: none;
+  border-color: #2563eb; /* Blue border on focus */
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
+}
+
+.save-change {
+  width: 40%;
+  background-color: #2563eb; 
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out;
+  border: none;
+  margin: 20px auto;
+}
+
+.save-change:hover {
+  background-color: #1e40af; /* Darker blue on hover */
+}
+
+/*Order*/
+.order-btn-edit
+{
+  background-color: white;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+}
+.order-btn-delete
+{
+  background-color: transparent;
+  border: none;
+  color: red;
+  cursor: pointer;
+}
+.order-btn-edit:hover{
+  transform: scale(1.1);}
+.order-btn-delete:hover{
+  transform: scale(1.1);}
+
+.add-order
+{
+  width: 160px;
+  background-color: #2563eb; 
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out;
+  border: none;
+  margin: 20px auto;
+  cursor: pointer;
+}
+/* Main Container */
+.edit-order-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+/* Order Content Box */
+.edit-order-content {
+  background: rgb(252, 251, 251);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin-top: -60px;
+}
+
+/* Heading */
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* Form Styling */
+.edit-order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Form Groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.order-label,
+.edit-order-label {
+  font-weight: 500;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+/* Input Fields & Select */
+.order-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Save Button */
+.save-order {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition:0.3s ease;
+}
+
+.save-order:hover {
+  background-color: #0056b3;
+}
+
+
+
+/* Container Styling */
+.editProductContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+/* Content Box */
+.productcontent {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Header Text */
+.headertext {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+.editform {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Form Group */
+.formgroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Label Styling */
+.editprodname,
+.editprodprice {
+  font-size: 16px;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+/* Input Fields */
+.ordername,
+.orderprice {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.ordername:focus,
+.orderprice:focus {
+  border-color: #007bff;
+}
+
+/* Save Button */
+.ordersave {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ordersave:hover {
+  background-color: #0056b3;
+}
+
